@@ -1,0 +1,80 @@
+2024-11-05 23:27:54,620 - INFO - Created run directory: logs/run_20241105_232754
+2024-11-05 23:27:54,620 - INFO - Starting model training process...
+2024-11-05 23:27:54,626 - INFO - Data columns:
+2024-11-05 23:27:54,626 - INFO - ['holiday', 'workingday', 'temp', 'atemp', 'humidity', 'windspeed', 'year', 'month', 'day', 'hour', 'dayofweek', 'season_1', 'season_2', 'season_3', 'season_4', 'weather_1', 'weather_2', 'weather_3', 'weather_4', 'count']
+2024-11-05 23:27:54,626 - INFO - Data shape before split: (10886, 20)
+2024-11-05 23:27:54,627 - INFO - Sample of target values: 0    16
+1    40
+2    32
+3    13
+4     1
+Name: count, dtype: int64
+2024-11-05 23:27:54,627 - INFO - Features shape: (10886, 19)
+2024-11-05 23:27:54,627 - INFO - Target shape: (10886,)
+2024-11-05 23:27:54,627 - INFO - Data loaded. Shape: (10886, 19)
+2024-11-05 23:27:54,627 - INFO - 
+Training Linear Regression...
+2024-11-05 23:27:54,635 - INFO - 
+Prediction statistics for Full:
+2024-11-05 23:27:54,636 - INFO - Actual values - min: 1.00, max: 977.00, mean: 191.57
+2024-11-05 23:27:54,636 - INFO - Predicted values - min: -158.18, max: 479.15, mean: 191.57
+2024-11-05 23:27:54,636 - INFO - 
+Full Set Performance:
+2024-11-05 23:27:54,636 - INFO - RMSE: 140.6103
+2024-11-05 23:27:54,636 - INFO - R2 Score: 0.3974
+2024-11-05 23:27:54,636 - INFO - Residuals - mean: 0.0000, std: 140.6168
+2024-11-05 23:27:54,966 - INFO - Model saved to logs/run_20241105_232754/models/linear_regression_20241105_232754.joblib
+2024-11-05 23:27:54,966 - INFO - 
+Training Ridge...
+2024-11-05 23:27:57,172 - INFO - Best parameters: {'alpha': 1.0}
+2024-11-05 23:27:57,173 - INFO - 
+Prediction statistics for Full:
+2024-11-05 23:27:57,174 - INFO - Actual values - min: 1.00, max: 977.00, mean: 191.57
+2024-11-05 23:27:57,174 - INFO - Predicted values - min: -158.13, max: 479.15, mean: 191.57
+2024-11-05 23:27:57,174 - INFO - 
+Full Set Performance:
+2024-11-05 23:27:57,174 - INFO - RMSE: 140.6106
+2024-11-05 23:27:57,174 - INFO - R2 Score: 0.3974
+2024-11-05 23:27:57,175 - INFO - Residuals - mean: 0.0000, std: 140.6171
+2024-11-05 23:27:57,299 - INFO - Model saved to logs/run_20241105_232754/models/ridge_20241105_232757.joblib
+2024-11-05 23:27:57,299 - INFO - 
+Training Lasso...
+2024-11-05 23:27:57,847 - INFO - Best parameters: {'alpha': 1.0}
+2024-11-05 23:27:57,848 - INFO - 
+Prediction statistics for Full:
+2024-11-05 23:27:57,848 - INFO - Actual values - min: 1.00, max: 977.00, mean: 191.57
+2024-11-05 23:27:57,848 - INFO - Predicted values - min: -142.87, max: 483.21, mean: 191.57
+2024-11-05 23:27:57,848 - INFO - 
+Full Set Performance:
+2024-11-05 23:27:57,849 - INFO - RMSE: 140.7349
+2024-11-05 23:27:57,849 - INFO - R2 Score: 0.3963
+2024-11-05 23:27:57,849 - INFO - Residuals - mean: 0.0000, std: 140.7414
+2024-11-05 23:27:57,963 - INFO - Model saved to logs/run_20241105_232754/models/lasso_20241105_232757.joblib
+2024-11-05 23:27:57,963 - INFO - 
+Training Random Forest...
+2024-11-05 23:28:10,710 - INFO - Best parameters: {'n_estimators': 200, 'min_samples_split': 2, 'max_depth': 20}
+2024-11-05 23:28:10,948 - INFO - 
+Prediction statistics for Full:
+2024-11-05 23:28:10,948 - INFO - Actual values - min: 1.00, max: 977.00, mean: 191.57
+2024-11-05 23:28:10,948 - INFO - Predicted values - min: 1.07, max: 940.14, mean: 192.02
+2024-11-05 23:28:10,949 - INFO - 
+Full Set Performance:
+2024-11-05 23:28:10,949 - INFO - RMSE: 14.6853
+2024-11-05 23:28:10,949 - INFO - R2 Score: 0.9934
+2024-11-05 23:28:10,949 - INFO - Residuals - mean: -0.4424, std: 14.6794
+2024-11-05 23:28:11,181 - INFO - Model saved to logs/run_20241105_232754/models/random_forest_20241105_232810.joblib
+2024-11-05 23:28:11,181 - INFO - 
+Training XGBoost...
+2024-11-05 23:28:13,570 - INFO - Best parameters: {'subsample': 0.8, 'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.1}
+2024-11-05 23:28:13,586 - INFO - 
+Prediction statistics for Full:
+2024-11-05 23:28:13,586 - INFO - Actual values - min: 1.00, max: 977.00, mean: 191.57
+2024-11-05 23:28:13,586 - INFO - Predicted values - min: -69.24, max: 904.52, mean: 191.59
+2024-11-05 23:28:13,587 - INFO - 
+Full Set Performance:
+2024-11-05 23:28:13,587 - INFO - RMSE: 31.7258
+2024-11-05 23:28:13,587 - INFO - R2 Score: 0.9693
+2024-11-05 23:28:13,587 - INFO - Residuals - mean: -0.0166, std: 31.7272
+2024-11-05 23:28:13,722 - INFO - Model saved to logs/run_20241105_232754/models/xgboost_20241105_232813.joblib
+2024-11-05 23:28:13,722 - INFO - 
+Training process completed!

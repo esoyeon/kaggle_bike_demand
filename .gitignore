@@ -2,7 +2,13 @@
 data/processed/*
 data/external/*
 models/saved/*
+
+# Ignore all logs except the latest one (as of now)
 logs/*
+!logs/run_20241105_232754/
+logs/run_20241105_232754/*
+!logs/run_20241105_232754/training.log
+!logs/run_20241105_232754/plots/
 
 # But keep the directories with .gitkeep
 !data/processed/.gitkeep
