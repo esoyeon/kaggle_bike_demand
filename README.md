@@ -122,4 +122,4 @@ python src/models/predict.py
 - 모든 경로는 프로젝트 루트 디렉토리 기준
 - 로그 파일은 자동으로 타임스탬프 포함하여 생성
 - 모델 파일은 자동으로 버전 관리됨
-# kaggle_bike_demand
+
