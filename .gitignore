@@ -1,38 +1,17 @@
-# 운영체제 관련 파일
-.DS_Store
-Thumbs.db
-
-# 편집기/IDE 관련 파일
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Data files
-data/raw/*
+# Ignore all files in these directories
 data/processed/*
 data/external/*
-!data/raw/.gitkeep
+models/saved/*
+logs/*
+
+# But keep the directories with .gitkeep
 !data/processed/.gitkeep
 !data/external/.gitkeep
-
-# Model files and logs
-models/saved/*
 !models/saved/.gitkeep
-logs/run_*/models/  # 실행별 모델 파일 제외
-*.joblib            # 모든 joblib 파일 제외
-*.pkl              # 모든 pickle 파일 제외
-*.h5               # 모든 h5 파일 제외
-*.model            # 기타 모델 파일 제외
-
-# Logs
-logs/*
 !logs/.gitkeep
 
-# Jupyter Notebook
-.ipynb_checkpoints
-notebooks/.ipynb_checkpoints/
-*.ipynb
+# Keep raw data
+!data/raw/bike_train.csv
 
 # Python
 __pycache__/
@@ -63,12 +42,23 @@ ENV/
 .env
 .venv
 
-# Large files
-*.csv
-*.parquet
-*.feather
-*.hdf5
-*.zip
-*.tar.gz
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# 기타 이전 설정들...
+# Jupyter Notebook
+.ipynb_checkpoints
+notebooks/.ipynb_checkpoints/
+*.ipynb
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# ML specific
+*.joblib
+*.pkl
+*.h5
+*.model
